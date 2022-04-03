@@ -20,6 +20,7 @@ function App() {
   const [time, setTime] = useState('')
   const getTime = async () => {
     const response = await fetchServerlessAPI()
+    console.log('test', response)
     setTime(response.data)
   }
 
