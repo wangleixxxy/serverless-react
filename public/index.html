@@ -29,7 +29,17 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script src="/node_modules/worker-box/index.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+        .then(function(registration) {
+          console.log('serviceWorker注册范围', registration.scope)
+        })
+        .catch(function(error) {
+          console.log('登记失败')
+        })
+      }
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
