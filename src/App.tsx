@@ -27,7 +27,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>获取的数据：{ time }</p>
+        <p>获取的数据是：{ time }</p>
         <button onClick={getTime}>点击获取</button>
       </header>
     </div>
